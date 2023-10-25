@@ -3,6 +3,16 @@ version: '3'
 services:
   nodejs:
     #fill out the configuration here
+    image: nginx:mainline-alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - web-root:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+    depends_on:
+      - nodejs
     networks:
       - app-network
   
@@ -28,7 +38,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      device: /c/Users/Nick's PC/Documents/cmsc389t/cmsc389T-project3-web #/absolute/path/to/web/template/folder
       o: bind
 
 networks:
