@@ -1,3 +1,4 @@
+https://nkomons.github.io/cmsc389T-project3-web/
 # cmsc388T-web-template
 
 ## Color Family
@@ -13,4 +14,3 @@ Rose quartz: #B2A3B5
 
 ## CSS
 .img -> where you can adjust image size
-https://nkomons.github.io/cmsc389T-project3-web/
