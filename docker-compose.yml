@@ -5,22 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-    - "8080:80"
-    image: node-web-app
-    container_name: website
-    restart: unless-stopped
-    #fill out the configuration here
-    #image: nginx:mainline-alpine
-    #container_name: webserver
-    #restart: unless-stopped
     #ports:
-    #  - "80:80"
-    #volumes:
-    #  - web-root:/var/www/html
-    #  - ./nginx-conf:/etc/nginx/conf.d
-    #depends_on:
-    #  - nodejs
+    #- "8080:80"
+    image: node:10-alpine
+    container_name: nodejs
+    restart: unless-stopped
     networks:
       - app-network
   
